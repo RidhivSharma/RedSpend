@@ -2,13 +2,13 @@ import { monthKey, shiftMonthKey, toDate } from "./dateHelpers";
 import { balance, groupByCategory, totalExpense, totalIncome } from "./calc";
 
 const FALLBACK_PALETTE = [
-  "#4f46e5",
-  "#0ea5e9",
+  "#36d399",
+  "#38bdf8",
   "#f97316",
-  "#ec4899",
-  "#8b5cf6",
+  "#f87171",
+  "#a78bfa",
   "#14b8a6",
-  "#f59e0b",
+  "#fbbf24",
   "#64748b",
 ];
 

@@ -39,7 +39,7 @@ function downloadBlob(blob, filename) {
 
 export function exportTransactionsCSV(
   transactions = [],
-  filename = `spendwise-transactions-${todayStamp()}.csv`
+  filename = `redspend-transactions-${todayStamp()}.csv`
 ) {
   const list = Array.isArray(transactions) ? transactions : [];
   const rows = list.map((transaction) => [
@@ -251,5 +251,5 @@ export async function exportMonthlyReportPDF(
     });
   }
 
-  doc.save(`spendwise-report-${month}.pdf`);
+  doc.save(`redspend-report-${month}.pdf`);
 }

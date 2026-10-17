@@ -1,13 +1,13 @@
-# SpendWise QA Checklist
+# RedSpend QA Checklist
 
-Manual QA checklist for the SpendWise app. Run `npm run dev`, log in with a test account (or create one), and work through the sections below. Check off each item as it passes and note any failures with a short description.
+Manual QA checklist for the RedSpend app. Run `npm run dev`, log in with a test account (or create one), and work through the sections below. Check off each item as it passes and note any failures with a short description.
 
 - [ ] Environment ready: `.env` filled, `npm run dev` starts without console errors
 
 ## Setup and authentication
 
-- [ ] Signed-out visitors hitting `/`, `/transactions`, `/budgets`, `/reports`, `/settings` are redirected to `/login`
-- [ ] Signed-in users hitting `/login`, `/signup` or `/forgot-password` are redirected into the app
+- [ ] Signed-out visitors see the public landing page at `/` (no redirect), while `/dashboard`, `/transactions`, `/budgets`, `/reports` and `/settings` redirect to `/login`
+- [ ] Signed-in users hitting `/login`, `/signup` or `/forgot-password` are redirected to `/dashboard` (or the originally requested page)
 - [ ] Signup validates: required name, valid email, password 6+ characters, matching confirm password
 - [ ] Signup creates the account, seeds the default categories and lands on the Dashboard
 - [ ] Signup with an already-used email shows a friendly error (not a raw Firebase error)
@@ -19,8 +19,18 @@ Manual QA checklist for the SpendWise app. Run `npm run dev`, log in with a test
 - [ ] Logout from the header user menu and from Settings works and returns to `/login`
 - [ ] After logout, browser back button does not reveal protected pages
 - [ ] If the session expires (revoke/expire the token or sign out from another tab), the login page shows "Your session expired" instead of silent failure
-- [ ] Visiting an unknown URL shows the 404 page with a working "Back to dashboard" link
-- [ ] Browser tab title updates per page (e.g. "Dashboard · SpendWise", "Page not found · SpendWise")
+- [ ] Visiting an unknown URL while signed in shows the 404 page with a working "Back to dashboard" link (while signed out it redirects to `/login`)
+- [ ] Browser tab title updates per page (e.g. "Dashboard · RedSpend", "Page not found · RedSpend"; landing shows the RedSpend tagline)
+
+## Landing page (public site)
+
+- [ ] `/` renders while signed out: nav, hero, dashboard preview, features, clarity, steps, CTA and footer all visible
+- [ ] Nav anchor links (Features, How it works, Benefits) scroll to the right sections
+- [ ] CTAs route correctly: "Log In" → `/login`, "Sign Up" → `/signup` when signed out; nav and CTA switch to "Open Dashboard" → `/dashboard` when signed in
+- [ ] Under 768px the nav collapses to a menu button that opens and closes the link list
+- [ ] Orbit icons rotate around the hero rings and chips stay upright; with `prefers-reduced-motion: reduce` the animation is disabled
+- [ ] Landing fits 360px with no horizontal scrolling and the orbit scales down at the 1024px/768px/480px breakpoints
+- [ ] Landing copy only mentions shipped features (tracking, budgets, insights, PDF/CSV exports)
 
 ## Transactions
 
@@ -94,8 +104,8 @@ Manual QA checklist for the SpendWise app. Run `npm run dev`, log in with a test
 
 ## Dark mode
 
-- [ ] Header toggle switches themes on every page (Dashboard, Transactions, Budgets, Reports, Settings, auth pages)
-- [ ] Theme choice persists across reloads and new tabs
+- [ ] Header toggle switches themes on every app page (Dashboard, Transactions, Budgets, Reports, Settings)
+- [ ] Theme choice persists across reloads and new tabs, including on the landing page and auth screens (default is dark)
 - [ ] Charts re-render with theme-correct colors (axes, grid, tooltips, datasets) right after toggling
 - [ ] Text contrast is readable on cards, tables, modals, toasts, insights and the offline banner in dark mode
 

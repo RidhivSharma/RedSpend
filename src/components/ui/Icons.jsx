@@ -299,3 +299,152 @@ export function FileTextIcon(props) {
     </IconBase>
   );
 }
+
+export function ArrowRightIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </IconBase>
+  );
+}
+
+export function WalletIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18a2 2 0 0 1 2 2v1" />
+      <path d="M3 7.5V17a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1.5" />
+      <path d="M21 9.5h-4a3 3 0 0 0 0 6h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1Z" />
+      <path d="M16.5 12.5h.01" />
+    </IconBase>
+  );
+}
+
+export function CreditCardIcon(props) {
+  return (
+    <IconBase {...props}>
+      <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+      <path d="M2.5 10h19" />
+      <path d="M6.5 15h4" />
+    </IconBase>
+  );
+}
+
+export function PiggyBankIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M21 12v3a2 2 0 0 1-1.2 1.83L20 20h-2.5l-.6-1.7a8.5 8.5 0 0 1-3.4.7H9a8 8 0 0 1-6.5-3.2A3 3 0 0 1 4 11h13a4 4 0 0 1 4 1Z" />
+      <path d="M16 10.5V9a4 4 0 0 0-4-4H8.5A3.5 3.5 0 0 0 5 8.5V11" />
+      <path d="M9 15.5h.01" />
+      <path d="M21 12h-2" />
+    </IconBase>
+  );
+}
+
+export function CoinsIcon(props) {
+  return (
+    <IconBase {...props}>
+      <circle cx="9" cy="9" r="6" />
+      <path d="M15.5 6.3a6 6 0 0 1 3.3 8.2" />
+      <path d="M21 12a6 6 0 0 1-8.6 5.7" />
+      <path d="M9 6.5v5" />
+      <path d="M7 9h4" />
+    </IconBase>
+  );
+}
+
+export function ShieldIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M12 2.5 4.5 5.5v6c0 4.6 3.1 8.4 7.5 10 4.4-1.6 7.5-5.4 7.5-10v-6L12 2.5Z" />
+      <path d="m9 12 2 2 4-4.5" />
+    </IconBase>
+  );
+}
+
+export function ZapIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M13 2 4 13.5h6L11 22l9-11.5h-6L13 2Z" />
+    </IconBase>
+  );
+}
+
+export function TrendingUpIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="m3 17 6-6 4 4 8-8" />
+      <path d="M15 7h6v6" />
+    </IconBase>
+  );
+}
+
+export function LockIcon(props) {
+  return (
+    <IconBase {...props}>
+      <rect x="4.5" y="10.5" width="15" height="10" rx="2" />
+      <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
+      <path d="M12 14.5v2.5" />
+    </IconBase>
+  );
+}
+
+export function ScanIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M4 8V6a2 2 0 0 1 2-2h2" />
+      <path d="M16 4h2a2 2 0 0 1 2 2v2" />
+      <path d="M20 16v2a2 2 0 0 1-2 2h-2" />
+      <path d="M8 20H6a2 2 0 0 1-2-2v-2" />
+      <path d="M4 12h16" />
+    </IconBase>
+  );
+}
+
+export function SlidersIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M5 4v6" />
+      <path d="M5 14v6" />
+      <path d="M12 4v3" />
+      <path d="M12 11v9" />
+      <path d="M19 4v9" />
+      <path d="M19 17v3" />
+      <path d="M2.5 12h5" />
+      <path d="M9.5 9h5" />
+      <path d="M16.5 15h5" />
+    </IconBase>
+  );
+}
+
+export function RefreshIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M21 12a9 9 0 0 1-15.4 6.4L3 16" />
+      <path d="M3 12a9 9 0 0 1 15.4-6.4L21 8" />
+      <path d="M3 21v-5h5" />
+      <path d="M21 3v5h-5" />
+    </IconBase>
+  );
+}
+
+export function MenuIcon(props) {
+  return (
+    <IconBase {...props}>
+      <path d="M3.5 7h17" />
+      <path d="M3.5 12h17" />
+      <path d="M3.5 17h17" />
+    </IconBase>
+  );
+}
+
+export function CalendarIcon(props) {
+  return (
+    <IconBase {...props}>
+      <rect x="3.5" y="5" width="17" height="16" rx="2.5" />
+      <path d="M3.5 10h17" />
+      <path d="M8 3v4" />
+      <path d="M16 3v4" />
+    </IconBase>
+  );
+}

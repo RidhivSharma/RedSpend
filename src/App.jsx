@@ -9,6 +9,7 @@ import RouteTitle from "./components/routing/RouteTitle";
 const BudgetsPage = lazy(() => import("./pages/BudgetsPage"));
 const DashboardPage = lazy(() => import("./pages/DashboardPage"));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage"));
+const LandingPage = lazy(() => import("./pages/LandingPage"));
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const ReportsPage = lazy(() => import("./pages/ReportsPage"));
@@ -21,6 +22,7 @@ export default function App() {
     <>
       <RouteTitle />
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route element={<PublicRoute />}>
           <Route element={<AuthLayout />}>
             <Route path="/login" element={<LoginPage />} />
@@ -30,7 +32,7 @@ export default function App() {
         </Route>
         <Route element={<ProtectedRoute />}>
           <Route element={<AppLayout />}>
-            <Route index element={<DashboardPage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/transactions" element={<TransactionsPage />} />
             <Route path="/budgets" element={<BudgetsPage />} />
             <Route path="/reports" element={<ReportsPage />} />

@@ -10,7 +10,7 @@ export default function NotFoundPage() {
       <p className="page-subtitle">
         The page you are looking for does not exist or may have been moved.
       </p>
-      <Link to="/" className="btn btn-primary btn-md">
+      <Link to="/dashboard" className="btn btn-primary btn-md">
         Back to dashboard
       </Link>
     </section>

@@ -110,7 +110,7 @@ export function CategoriesSection() {
       setDeleting(null);
       toast.success("Category deleted.");
     } catch (deleteError) {
-      console.error("[SpendWise] Failed to delete category:", deleteError);
+      console.error("[RedSpend] Failed to delete category:", deleteError);
       toast.error(
         deleteError?.code
           ? "Could not delete the category. Check your connection and try again."

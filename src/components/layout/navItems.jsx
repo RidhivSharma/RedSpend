@@ -1,7 +1,7 @@
 import { ChartIcon, HomeIcon, ReceiptIcon, SettingsIcon, TargetIcon } from "../ui/Icons";
 
 export const NAV_ITEMS = [
-  { to: "/", label: "Dashboard", icon: HomeIcon },
+  { to: "/dashboard", label: "Dashboard", icon: HomeIcon },
   { to: "/transactions", label: "Transactions", icon: ReceiptIcon },
   { to: "/budgets", label: "Budgets", icon: TargetIcon },
   { to: "/reports", label: "Reports", icon: ChartIcon },

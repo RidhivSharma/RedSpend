@@ -23,7 +23,7 @@ export function Header() {
   const [loggingOut, setLoggingOut] = useState(false);
   const menuRef = useRef(null);
 
-  const title = PAGE_TITLES[pathname] ?? "SpendWise";
+  const title = PAGE_TITLES[pathname] ?? "RedSpend";
   const displayName = profile?.displayName || user?.displayName || user?.email || "User";
 
   useEffect(() => {

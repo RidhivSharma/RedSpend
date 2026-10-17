@@ -180,7 +180,7 @@ export default function TransactionsPage() {
         } to CSV.`
       );
     } catch (exportError) {
-      console.error("[SpendWise] Failed to export CSV:", exportError);
+      console.error("[RedSpend] Failed to export CSV:", exportError);
       toast.error("Could not export the transactions. Please try again.");
     }
   };
@@ -193,7 +193,7 @@ export default function TransactionsPage() {
       setDeleting(null);
       toast.success("Transaction deleted.");
     } catch (deleteError) {
-      console.error("[SpendWise] Failed to delete transaction:", deleteError);
+      console.error("[RedSpend] Failed to delete transaction:", deleteError);
       toast.error(
         "Could not delete the transaction. Check your connection and try again."
       );

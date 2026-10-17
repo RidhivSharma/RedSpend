@@ -1,6 +1,6 @@
-# SpendWise
+# RedSpend
 
-SpendWise is a personal expense tracker with budget insights. Track income and expenses, set monthly budgets per category, and understand your spending through a dashboard, charts, reports and generated insights. All data is stored in your own Firebase project and synced in realtime.
+RedSpend is a personal expense tracker with budget insights. Track income and expenses, set monthly budgets per category, and understand your spending through a dashboard, charts, reports and generated insights. All data is stored in your own Firebase project and synced in realtime.
 
 Built as a React single-page app (Vite, JavaScript) with Firebase Authentication and Cloud Firestore, Chart.js for charts and jsPDF for report exports. No UI libraries — the interface uses a small plain-CSS design system with light and dark themes.
 
@@ -139,7 +139,7 @@ All app data lives under `users/{uid}/**` and is protected by Firestore security
 
 To apply the rules:
 
-1. Open the [Firebase Console](https://console.firebase.google.com/) and select the SpendWise project.
+1. Open the [Firebase Console](https://console.firebase.google.com/) and select the RedSpend project.
 2. Go to **Firestore Database → Rules**.
 3. Replace the editor contents with the contents of the [`firestore.rules`](./firestore.rules) file in this repository.
 4. Click **Publish**.

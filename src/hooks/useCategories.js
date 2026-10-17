@@ -27,7 +27,7 @@ export function useCategories() {
         setError(null);
       },
       (subscriptionError) => {
-        console.error("[SpendWise] Failed to load categories:", subscriptionError);
+        console.error("[RedSpend] Failed to load categories:", subscriptionError);
         setError("Could not load categories. Check your connection and try again.");
         setLoading(false);
       }

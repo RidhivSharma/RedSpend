@@ -157,7 +157,7 @@ export default function BudgetsPage() {
       setDeletingBudget(null);
       toast.success("Budget removed.");
     } catch (deleteError) {
-      console.error("[SpendWise] Failed to delete budget:", deleteError);
+      console.error("[RedSpend] Failed to delete budget:", deleteError);
       toast.error(
         deleteError?.code
           ? "Could not remove the budget. Check your connection and try again."
@@ -194,7 +194,7 @@ export default function BudgetsPage() {
         } from ${formatMonthKey(previousMonth)}.`
       );
     } catch (copyError) {
-      console.error("[SpendWise] Failed to copy budgets:", copyError);
+      console.error("[RedSpend] Failed to copy budgets:", copyError);
       toast.error(
         copyError?.code
           ? "Could not copy budgets. Check your connection and try again."

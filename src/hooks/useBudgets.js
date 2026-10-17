@@ -30,7 +30,7 @@ export function useBudgets(month) {
         setState({ data: budgets, loading: false, error: null, month: activeMonth });
       },
       (subscriptionError) => {
-        console.error("[SpendWise] Failed to load budgets:", subscriptionError);
+        console.error("[RedSpend] Failed to load budgets:", subscriptionError);
         setState((current) => ({
           ...current,
           loading: false,

@@ -24,7 +24,7 @@ const missingEnvVars = [
 
 if (missingEnvVars.length > 0) {
   console.error(
-    `[SpendWise] Missing Firebase environment values: ${missingEnvVars.join(", ")}. ` +
+    `[RedSpend] Missing Firebase environment values: ${missingEnvVars.join(", ")}. ` +
       "Copy .env.example to .env, fill in the VITE_FIREBASE_* values and restart the dev server."
   );
 }

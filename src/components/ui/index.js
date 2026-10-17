@@ -4,6 +4,7 @@ export { EmptyState } from "./EmptyState";
 export { FullPageSpinner } from "./FullPageSpinner";
 export * from "./Icons";
 export { Input } from "./Input";
+export { Logo, LogoMark } from "./Logo";
 export { Modal } from "./Modal";
 export { PeriodNav } from "./PeriodNav";
 export { ProgressBar } from "./ProgressBar";

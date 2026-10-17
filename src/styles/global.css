@@ -1,6 +1,8 @@
+/* Obsidian Kinetic — RedSpend design system.
+   Dark is the signature theme; light is an equivalent tuned variant. */
 :root {
-  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Geist", "Inter", "Segoe UI", system-ui, -apple-system,
+    BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
 
@@ -16,89 +18,119 @@
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
+  --radius-xl: 24px;
   --radius-full: 999px;
 
   --sidebar-width: 248px;
   --header-height: 64px;
   --tabbar-height: 64px;
 
-  color-scheme: light;
+  color-scheme: dark;
 
-  --color-primary: #4f46e5;
-  --color-primary-hover: #4338ca;
-  --color-primary-active: #3730a3;
-  --color-primary-soft: #eef2ff;
-  --color-primary-contrast: #ffffff;
+  /* Surface progression: canvas → section → card → overlay */
+  --bg: #0b0d10;
+  --surface-low: #101318;
+  --surface: #151920;
+  --surface-muted: #1b2028;
+  --surface-hover: #242b35;
+  --input-bg: #0f1216;
+  --border: #282e38;
+  --border-strong: #3a424e;
+  --hairline: rgb(255 255 255 / 8%);
+  --card-highlight: inset 0 1px 0 rgb(255 255 255 / 4%);
 
-  --color-income: #16a34a;
-  --color-income-soft: #ecfdf5;
-  --color-expense: #dc2626;
-  --color-expense-soft: #fef2f2;
+  --text: #e2e2e6;
+  --text-muted: #9aa4b2;
+  --text-faint: #667085;
+
+  --color-primary: #36d399;
+  --color-primary-hover: #4be0ab;
+  --color-primary-active: #2bbf8a;
+  --color-primary-soft: rgb(54 211 153 / 12%);
+  --color-primary-contrast: #06281a;
+
+  --color-brand: #e5484d;
+  --color-brand-soft: rgb(229 72 77 / 14%);
+  --color-brand-border: rgb(229 72 77 / 32%);
+
+  --color-income: #36d399;
+  --color-income-soft: rgb(54 211 153 / 14%);
+  --color-expense: #f87171;
+  --color-expense-soft: rgb(248 113 113 / 14%);
+  --color-expense-border: rgb(248 113 113 / 25%);
   --color-success: var(--color-income);
   --color-success-soft: var(--color-income-soft);
   --color-danger: var(--color-expense);
   --color-danger-soft: var(--color-expense-soft);
-  --color-warning: #d97706;
-  --color-warning-soft: #fffbeb;
-  --color-info: #0284c7;
-  --color-info-soft: #f0f9ff;
-
-  --bg: #f6f7fb;
-  --surface: #ffffff;
-  --surface-muted: #f1f5f9;
-  --surface-hover: #e9eef5;
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
-
-  --text: #0f172a;
-  --text-muted: #64748b;
-  --text-faint: #94a3b8;
-
-  --shadow-sm: 0 1px 2px rgb(15 23 42 / 6%), 0 1px 3px rgb(15 23 42 / 8%);
-  --shadow-md: 0 4px 12px rgb(15 23 42 / 8%), 0 2px 4px rgb(15 23 42 / 4%);
-  --shadow-lg: 0 16px 40px rgb(15 23 42 / 16%);
-
-  --focus-ring: 0 0 0 3px rgb(79 70 229 / 25%);
-  --overlay: rgb(15 23 42 / 50%);
-  --skeleton-shine: rgb(255 255 255 / 60%);
-}
-
-[data-theme="dark"] {
-  color-scheme: dark;
-
-  --color-primary: #818cf8;
-  --color-primary-hover: #a5b4fc;
-  --color-primary-active: #6366f1;
-  --color-primary-soft: rgb(129 140 248 / 16%);
-  --color-primary-contrast: #0f172a;
-
-  --color-income: #34d399;
-  --color-income-soft: rgb(52 211 153 / 14%);
-  --color-expense: #f87171;
-  --color-expense-soft: rgb(248 113 113 / 14%);
   --color-warning: #fbbf24;
   --color-warning-soft: rgb(251 191 36 / 14%);
   --color-info: #38bdf8;
   --color-info-soft: rgb(56 189 248 / 14%);
 
-  --bg: #0f172a;
-  --surface: #1e293b;
-  --surface-muted: #26344b;
-  --surface-hover: #2f3f5c;
-  --border: #2c3c58;
-  --border-strong: #3d4f6e;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 35%);
+  --shadow-md: 0 6px 18px rgb(0 0 0 / 35%);
+  --shadow-lg: 0 24px 60px -20px rgb(0 0 0 / 65%);
+  --shadow-glow: 0 0 60px -15px rgb(54 211 153 / 12%);
 
-  --text: #e2e8f0;
-  --text-muted: #94a3b8;
-  --text-faint: #64748b;
+  --focus-ring: 0 0 0 3px rgb(54 211 153 / 30%);
+  --overlay: rgb(5 7 10 / 72%);
+  --skeleton-shine: rgb(255 255 255 / 6%);
 
-  --shadow-sm: 0 1px 2px rgb(2 6 23 / 40%), 0 1px 3px rgb(2 6 23 / 30%);
-  --shadow-md: 0 4px 12px rgb(2 6 23 / 45%), 0 2px 4px rgb(2 6 23 / 35%);
-  --shadow-lg: 0 16px 40px rgb(2 6 23 / 55%);
+  --glass-bg: rgb(16 19 24 / 78%);
+  --glass-border: rgb(255 255 255 / 8%);
+  --control-active-bg: #242b35;
+}
 
-  --focus-ring: 0 0 0 3px rgb(129 140 248 / 40%);
-  --overlay: rgb(2 6 23 / 65%);
-  --skeleton-shine: rgb(148 163 184 / 12%);
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f5f7f6;
+  --surface-low: #fbfcfc;
+  --surface: #ffffff;
+  --surface-muted: #edf1f0;
+  --surface-hover: #e2e8e6;
+  --input-bg: #ffffff;
+  --border: #dde3e1;
+  --border-strong: #c4cecb;
+  --hairline: rgb(15 23 20 / 8%);
+  --card-highlight: inset 0 1px 0 rgb(255 255 255 / 80%);
+
+  --text: #101614;
+  --text-muted: #5b6764;
+  --text-faint: #8b9591;
+
+  --color-primary: #0e9f6e;
+  --color-primary-hover: #0c8a5e;
+  --color-primary-active: #0a754f;
+  --color-primary-soft: rgb(14 159 110 / 10%);
+  --color-primary-contrast: #ffffff;
+
+  --color-brand: #dc3a40;
+  --color-brand-soft: rgb(220 58 64 / 10%);
+  --color-brand-border: rgb(220 58 64 / 28%);
+
+  --color-income: #0e9f6e;
+  --color-income-soft: rgb(14 159 110 / 10%);
+  --color-expense: #dc4c48;
+  --color-expense-soft: rgb(220 76 72 / 10%);
+  --color-expense-border: rgb(220 76 72 / 25%);
+  --color-warning: #b45309;
+  --color-warning-soft: rgb(180 83 9 / 10%);
+  --color-info: #0369a1;
+  --color-info-soft: rgb(3 105 161 / 10%);
+
+  --shadow-sm: 0 1px 2px rgb(15 23 20 / 6%), 0 1px 3px rgb(15 23 20 / 8%);
+  --shadow-md: 0 4px 12px rgb(15 23 20 / 8%), 0 2px 4px rgb(15 23 20 / 4%);
+  --shadow-lg: 0 16px 40px rgb(15 23 20 / 16%);
+  --shadow-glow: 0 0 60px -15px rgb(14 159 110 / 12%);
+
+  --focus-ring: 0 0 0 3px rgb(14 159 110 / 22%);
+  --overlay: rgb(16 22 20 / 45%);
+  --skeleton-shine: rgb(255 255 255 / 70%);
+
+  --glass-bg: rgb(255 255 255 / 82%);
+  --glass-border: rgb(15 23 20 / 8%);
+  --control-active-bg: #ffffff;
 }
 
 *,
@@ -185,6 +217,32 @@ a:hover {
   color: var(--text-muted);
 }
 
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  text-decoration: none;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.logo-mark {
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px -6px rgb(229 72 77 / 55%);
+}
+
+.logo-wordmark {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  white-space: nowrap;
+}
+
 .text-income {
   color: var(--color-income);
 }
@@ -205,7 +263,7 @@ a:hover {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--card-highlight), var(--shadow-sm);
   padding: var(--space-5);
 }
 
@@ -234,9 +292,10 @@ a:hover {
   justify-content: center;
   gap: var(--space-2);
   height: 40px;
-  padding: 0 var(--space-4);
+  padding: 0 var(--space-5);
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 6%);
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1;
@@ -244,7 +303,8 @@ a:hover {
   cursor: pointer;
   user-select: none;
   transition: background-color 0.15s ease, color 0.15s ease,
-    border-color 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+    border-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease,
+    transform 0.05s ease;
 }
 
 .btn:active:not(:disabled) {
@@ -267,25 +327,28 @@ a:hover {
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: var(--color-primary-hover);
+  filter: brightness(1.1);
 }
 
 .btn-secondary {
-  background-color: var(--surface-muted);
+  background-color: var(--surface-low);
   color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background-color: var(--surface-hover);
+  background-color: var(--surface-muted);
+  border-color: var(--text-faint);
 }
 
 .btn-danger {
-  background-color: var(--color-danger);
-  color: #ffffff;
+  background-color: var(--color-expense-soft);
+  color: var(--color-expense);
+  border: 1px solid var(--color-expense-border);
 }
 
 .btn-danger:hover:not(:disabled) {
-  filter: brightness(0.93);
+  filter: brightness(1.08);
 }
 
 .btn-ghost {
@@ -378,7 +441,7 @@ a:hover {
   width: 100%;
   height: 42px;
   padding: 0 var(--space-3);
-  background-color: var(--surface);
+  background-color: var(--input-bg);
   color: var(--text);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
@@ -425,13 +488,13 @@ a:hover {
   -webkit-appearance: none;
   padding-right: var(--space-6);
   cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239aa4b2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right var(--space-3) center;
 }
 
-[data-theme="dark"] .select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+[data-theme="light"] .select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235b6764' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
 }
 
 .badge {
@@ -1038,7 +1101,7 @@ a:hover {
 }
 
 .type-toggle-option.active {
-  background-color: var(--surface);
+  background-color: var(--control-active-bg);
   box-shadow: var(--shadow-sm);
 }
 
@@ -1254,7 +1317,7 @@ a:hover {
 }
 
 .theme-option.active {
-  background-color: var(--surface);
+  background-color: var(--control-active-bg);
   color: var(--text);
   box-shadow: var(--shadow-sm);
 }

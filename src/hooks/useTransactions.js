@@ -27,7 +27,7 @@ export function useTransactions() {
         setError(null);
       },
       (subscriptionError) => {
-        console.error("[SpendWise] Failed to load transactions:", subscriptionError);
+        console.error("[RedSpend] Failed to load transactions:", subscriptionError);
         setError("Could not load transactions. Check your connection and try again.");
         setLoading(false);
       }

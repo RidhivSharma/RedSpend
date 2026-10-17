@@ -8,12 +8,15 @@ const AUTH_TITLES = {
   "/forgot-password": "Reset password",
 };
 
+const LANDING_TITLE = "RedSpend — Take control of where your money goes";
+
 export default function RouteTitle() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const title = PAGE_TITLES[pathname] ?? AUTH_TITLES[pathname];
-    document.title = title ? `${title} · SpendWise` : "Page not found · SpendWise";
+    const title =
+      pathname === "/" ? LANDING_TITLE : PAGE_TITLES[pathname] ?? AUTH_TITLES[pathname];
+    document.title = title ? `${title} · RedSpend` : "Page not found · RedSpend";
   }, [pathname]);
 
   return null;

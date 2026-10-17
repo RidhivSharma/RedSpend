@@ -39,14 +39,14 @@ export function AuthProvider({ children }) {
           const profileData = await ensureUserProfile(firebaseUser);
           setProfile(profileData);
         } catch (error) {
-          console.error("[SpendWise] Failed to load user profile:", error);
+          console.error("[RedSpend] Failed to load user profile:", error);
           setProfile(null);
         } finally {
           setLoading(false);
         }
       },
       (error) => {
-        console.error("[SpendWise] Auth state listener error:", error);
+        console.error("[RedSpend] Auth state listener error:", error);
         setLoading(false);
       }
     );

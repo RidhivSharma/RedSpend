@@ -63,7 +63,7 @@ export function BudgetRow({
     try {
       await onSave(category, parsed);
     } catch (saveError) {
-      console.error("[SpendWise] Failed to save budget:", saveError);
+      console.error("[RedSpend] Failed to save budget:", saveError);
       setError(
         saveError?.code
           ? "Could not save the budget. Check your connection and try again."

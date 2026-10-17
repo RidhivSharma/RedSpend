@@ -63,7 +63,7 @@ function ProfileSection() {
       await updateUserProfile({ displayName: trimmed });
       toast.success("Profile updated.");
     } catch (error) {
-      console.error("[SpendWise] Failed to update profile:", error);
+      console.error("[RedSpend] Failed to update profile:", error);
       toast.error(
         error?.code
           ? "Could not update your profile. Check your connection and try again."
@@ -130,7 +130,7 @@ function ProfileSection() {
         <div className="settings-section-head">
           <div>
             <h2 className="card-title">Session</h2>
-            <p className="card-subtitle">Sign out of SpendWise on this device.</p>
+            <p className="card-subtitle">Sign out of RedSpend on this device.</p>
           </div>
         </div>
         <Button variant="secondary" onClick={handleLogout} loading={loggingOut}>
@@ -172,7 +172,7 @@ function PreferencesSection() {
       await updateUserProfile({ currency: next });
       toast.success(`Currency updated to ${next}.`);
     } catch (error) {
-      console.error("[SpendWise] Failed to update currency:", error);
+      console.error("[RedSpend] Failed to update currency:", error);
       setCurrency(previous);
       toast.error(
         error?.code
@@ -197,7 +197,7 @@ function PreferencesSection() {
         }.`
       );
     } catch (exportError) {
-      console.error("[SpendWise] Failed to export data:", exportError);
+      console.error("[RedSpend] Failed to export data:", exportError);
       toast.error("Could not export your data. Please try again.");
     }
   };
@@ -213,7 +213,7 @@ function PreferencesSection() {
         `Added ${count} demo ${count === 1 ? "transaction" : "transactions"}.`
       );
     } catch (error) {
-      console.error("[SpendWise] Failed to add demo data:", error);
+      console.error("[RedSpend] Failed to add demo data:", error);
       toast.error(
         error?.code
           ? "Could not add demo data. Check your connection and try again."
@@ -234,7 +234,7 @@ function PreferencesSection() {
         `Deleted ${count} demo ${count === 1 ? "transaction" : "transactions"}.`
       );
     } catch (error) {
-      console.error("[SpendWise] Failed to delete demo data:", error);
+      console.error("[RedSpend] Failed to delete demo data:", error);
       toast.error(
         error?.code
           ? "Could not delete demo data. Check your connection and try again."
@@ -317,7 +317,7 @@ function PreferencesSection() {
           <div>
             <h2 className="card-title">Your data</h2>
             <p className="card-subtitle">
-              Download a copy of everything stored in SpendWise.
+              Download a copy of everything stored in RedSpend.
             </p>
           </div>
         </div>
@@ -348,7 +348,7 @@ function PreferencesSection() {
           <div>
             <h2 className="card-title">Demo data</h2>
             <p className="card-subtitle">
-              Add three months of realistic sample transactions to explore SpendWise.
+              Add three months of realistic sample transactions to explore RedSpend.
             </p>
           </div>
         </div>
@@ -390,7 +390,7 @@ function PreferencesSection() {
       <ConfirmDialog
         open={confirmingDemoDelete}
         title="Delete demo data?"
-        message="This removes only the sample transactions added by SpendWise. Your own transactions are kept."
+        message="This removes only the sample transactions added by RedSpend. Your own transactions are kept."
         confirmLabel="Delete demo data"
         loading={deletingDemo}
         onConfirm={handleDeleteDemo}

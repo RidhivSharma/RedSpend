@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to SpendWise are documented in this file.
+All notable changes to RedSpend are documented in this file.
 
 ## Phase 1 — Project scaffold and app shell (2026-10-16)
 
@@ -165,3 +165,19 @@ All notable changes to SpendWise are documented in this file.
 - `vercel.json` with the same SPA rewrite for Vercel deployments, plus a "Deploy to Vercel" README section (environment variables, authorized domains). `.gitignore` now also covers `.vercel`, `.firebase/` and `firebase-debug.log*`.
 - `.firebaserc.example` template for binding the Firebase project (`cp .firebaserc.example .firebaserc` or `firebase use --add`); `.firebaserc` added to `.gitignore`.
 - `QA_CHECKLIST.md`: manual QA checklist covering authentication, transactions, filters, budgets, dashboard, charts, reports, exports, settings, demo data, dark mode, mobile layout (360/768/1280px), resilience and cross-cutting behaviors, plus hosting deploy commands documented in the README.
+
+## Phase 11 — RedSpend rebrand, Obsidian Kinetic design system and public landing page (2026-10-17)
+
+### Added
+
+- Public landing page at `/` (`src/pages/LandingPage.jsx` + `src/components/landing/`): floating pill navigation with mobile menu, hero with an animated orbital icon field CSS-animated at three ring speeds (reduced-motion aware), a static product mock preview (KPIs, trajectory chart, categories, ledger), features, clarity-with-budget-card, three-step, auth-aware CTA and footer sections, all styled in `src/styles/landing.css` with responsive orbit scaling.
+- RedSpend brand identity: `Logo`/`LogoMark` UI components (red gradient mark + wordmark), red gradient favicon, updated `index.html` metadata and the Geist typeface via Google Fonts.
+- Dark "Obsidian Kinetic" token set in `global.css` (obsidian surfaces, emerald primary, coral expense tones, hairline borders, glass panels and card highlights), plus new brand/glass/input tokens; the light theme is kept as a complete variant behind the existing Settings toggle.
+
+### Changed
+
+- Dashboard moved from `/` to `/dashboard`; `/` is now the public landing page. `PublicRoute` redirects signed-in visitors to `/dashboard`, and in-app links, nav items, route titles and the 404 page were updated accordingly.
+- Auth screens are wrapped in the branded auth shell (logo link home, frosted card) and the sidebar/header use the shared `Logo` component; buttons, cards, inputs, selects, modals and toasts were restyled on the new tokens.
+- Dark is now the default theme (previously system preference); the `spendwise-theme` localStorage key is kept so saved preferences survive the rebrand.
+- Branding sweep: all user-visible strings, console prefixes and export file names now use RedSpend (e.g. `redspend-report-*.csv`); report fallback chart palette and category color preview adopt the new palette.
+- Landing copy advertises only shipped features (tracking, budgets, insights, PDF/CSV exports) — planned savings-goal functionality is deliberately not promised.

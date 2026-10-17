@@ -315,10 +315,10 @@ export default function ReportsPage() {
 
   const handleExportCSV = () => {
     try {
-      exportTransactionsCSV(monthTransactions, `spendwise-report-${month}.csv`);
+      exportTransactionsCSV(monthTransactions, `redspend-report-${month}.csv`);
       toast.success(`Exported ${monthTransactions.length} transactions.`);
     } catch (exportError) {
-      console.error("[SpendWise] Failed to export CSV:", exportError);
+      console.error("[RedSpend] Failed to export CSV:", exportError);
       toast.error("Could not export the report. Please try again.");
     }
   };
@@ -342,7 +342,7 @@ export default function ReportsPage() {
       );
       toast.success("Report downloaded.");
     } catch (pdfError) {
-      console.error("[SpendWise] Failed to create the PDF:", pdfError);
+      console.error("[RedSpend] Failed to create the PDF:", pdfError);
       toast.error("Could not create the PDF. Please try again.");
     } finally {
       setExportingPdf(false);

@@ -7,7 +7,7 @@ import {
   updateCategory,
 } from "../../services/categoryService";
 
-const DEFAULT_PREVIEW_COLOR = "#4f46e5";
+const DEFAULT_PREVIEW_COLOR = "#36d399";
 
 export function CategoryModal({
   open,
@@ -91,7 +91,7 @@ export function CategoryModal({
       }
       onSaved?.();
     } catch (error) {
-      console.error("[SpendWise] Failed to save category:", error);
+      console.error("[RedSpend] Failed to save category:", error);
       setFormError(
         error?.code
           ? "Could not save the category. Check your connection and try again."

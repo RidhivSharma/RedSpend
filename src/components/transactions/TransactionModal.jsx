@@ -128,7 +128,7 @@ export function TransactionModal({
         );
       }
     } catch (error) {
-      console.error("[SpendWise] Failed to check budget status:", error);
+      console.error("[RedSpend] Failed to check budget status:", error);
     }
   };
 
@@ -167,7 +167,7 @@ export function TransactionModal({
       }
       onSaved?.();
     } catch (error) {
-      console.error("[SpendWise] Failed to save transaction:", error);
+      console.error("[RedSpend] Failed to save transaction:", error);
       setFormError(
         error?.code
           ? "Could not save the transaction. Check your connection and try again."
