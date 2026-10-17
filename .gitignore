@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+*.local
+*.log
+npm-debug.log*
+.DS_Store
+.env
+.env.*
+!.env.example
+.firebaserc
+.firebase/
+firebase-debug.log*
+.vercel
+.vscode/*
+!.vscode/extensions.json
+.idea
