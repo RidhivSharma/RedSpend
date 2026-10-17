@@ -231,8 +231,7 @@ a:hover {
 
 .logo-mark {
   flex-shrink: 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px -6px rgb(229 72 77 / 55%);
+  filter: drop-shadow(0 4px 12px rgb(229 72 77 / 28%));
 }
 
 .logo-wordmark {

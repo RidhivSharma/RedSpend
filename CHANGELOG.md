@@ -171,7 +171,7 @@ All notable changes to RedSpend are documented in this file.
 ### Added
 
 - Public landing page at `/` (`src/pages/LandingPage.jsx` + `src/components/landing/`): floating pill navigation with mobile menu, hero with an animated orbital icon field CSS-animated at three ring speeds (reduced-motion aware), a static product mock preview (KPIs, trajectory chart, categories, ledger), features, clarity-with-budget-card, three-step, auth-aware CTA and footer sections, all styled in `src/styles/landing.css` with responsive orbit scaling.
-- RedSpend brand identity: `Logo`/`LogoMark` UI components (red gradient mark + wordmark), red gradient favicon, updated `index.html` metadata and the Geist typeface via Google Fonts.
+- RedSpend brand identity: `Logo`/`LogoMark` UI components using the red isometric-cube mark (`public/logo-mark.png`, transparent background, derived from the source artwork), a matching PNG favicon, updated `index.html` metadata and the Geist typeface via Google Fonts.
 - Dark "Obsidian Kinetic" token set in `global.css` (obsidian surfaces, emerald primary, coral expense tones, hairline borders, glass panels and card highlights), plus new brand/glass/input tokens; the light theme is kept as a complete variant behind the existing Settings toggle.
 
 ### Changed
